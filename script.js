@@ -8,6 +8,11 @@ function registerUser() {
     const age = document.getElementById('age').value;
     const gender = document.getElementById('gender').value;
 
+    if (!firstName || !lastName || !username || !password || !age || !gender) {
+        alert('Vyplňte všechny nevyplněné tabulky.');
+        return;
+    }
+
     const user = {
         firstName,
         lastName,
@@ -27,16 +32,21 @@ function loginUser() {
     const loginUsername = document.getElementById('loginUsername').value;
     const loginPassword = document.getElementById('loginPassword').value;
 
+    if (!loginUsername || !loginPassword) {
+        alert('Vyplňte všechny nevyplněné tabulky.');
+        return;
+    }
+
     const user = users.find(u => u.username === loginUsername);
 
     if (user) {
         if (user.password === loginPassword) {
-            alert('Login successful!');
+            alert('Přihlášení proběhlo úspěšně!');
         } else {
-            alert('Incorrect password. Please try again.');
+            alert('Nesprávné heslo. Prosím zkuste znovu.');
         }
     } else {
-        alert('Username not found. Please register first.');
+        alert('Přihlašovací jméno nebylo nalezeno. Nejdříve se registrujte prosím.');
     }
 }
 
@@ -45,7 +55,7 @@ function displayUserList() {
     userListDiv.innerHTML = '';
 
     if (users.length === 0) {
-        userListDiv.innerHTML = '<p>No users registered yet.</p>';
+        userListDiv.innerHTML = '<p>Žádný uživate zatím nebyl registrován.</p>';
     } else {
         const userListHTML = users.map(user => `
             <div>
