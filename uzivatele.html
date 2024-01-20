@@ -4,61 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>User Registration and Login App</title>
+    <title>Přihlašovací a Regisrační aplikace</title>
 </head>
 <body>
     <header>
-        <h1>User Registration and Login App</h1>
+        <h1>Přihlašte se do naší sekty</h1>
         <nav>
             <ul>
-                <li><a href="#" id="registerLink">Register</a></li>
-                <li><a href="#" id="loginLink">Login</a></li>
-                <li><a href="#" id="listUsersLink">List Users</a></li>
+                <li><a href="#" id="registerLink">Registrace</a></li>
+                <li><a href="#" id="loginLink">Přihlášení</a></li>
+                <li><a href="#" id="listUsersLink">List uživatelů</a></li>
             </ul>
         </nav>
     </header>
 
     <div id="content">
-        
+
         <div id="registerForm">
-            <label for="firstName">First Name:</label>
+            <label for="firstName">Jméno:</label>
             <input type="text" id="firstName" required>
 
-            <label for="lastName">Last Name:</label>
+            <label for="lastName">Příjmení:</label>
             <input type="text" id="lastName" required>
 
-            <label for="username">Username:</label>
+            <label for="username">Přihlašovací jméno:</label>
             <input type="text" id="username" required>
 
-            <label for="password">Password:</label>
+            <label for="password">Heslo:</label>
             <input type="password" id="password" required>
 
-            <label for="age">Age:</label>
+            <label for="age">Věk:</label>
             <input type="number" id="age" required>
 
-            <label for="gender">Gender:</label>
+            <label for="gender">Pohlaví:</label>
             <select id="gender" required>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="male">Muž</option>
+                <option value="female">Žena</option>
             </select>
 
-            <button onclick="registerUser()">Register</button>
+            <button onclick="registerUser()">Registrace</button>
         </div>
 
-        
+
         <div id="loginForm">
-            <label for="loginUsername">Username:</label>
+            <label for="loginUsername">Přihlašovací jméno:</label>
             <input type="text" id="loginUsername" required>
 
-            <label for="loginPassword">Password:</label>
+            <label for="loginPassword">Heslo:</label>
             <input type="password" id="loginPassword" required>
 
-            <button onclick="loginUser()">Login</button>
+            <button onclick="loginUser()">Přihlásit:</button>
         </div>
 
-        
+
         <div id="userList">
-            
+
         </div>
     </div>
 
